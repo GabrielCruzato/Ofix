@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Ofix</string>
+    <string name="descri_o">Descrição</string>
+    <string name="nome">nome</string>
+    <string name="categoria">categoria</string>
+    <string name="codigo">codigo</string>
+    <string name="status">status</string>
+
+    <string-array name="nome">
+        <item>Porta</item>
+        <item>Pneu</item>
+        <item>Cambio</item>
+        <item>Pistão</item>
+        <item>Baterias</item>
+        <item>Escapamento</item>
+        <item>Volante</item>
+        <item>Retrovizor</item>
+    </string-array>
+
+    <string-array name="categoria">
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+        <item>Lorem Ipsum</item>
+    </string-array>
+
+    <string-array name="codigo">
+        <item>Nº 21</item>
+        <item>Nº 7</item>
+        <item>Nº 999</item>
+        <item>Nº 6</item>
+        <item>Nº 979</item>
+        <item>Nº 89</item>
+        <item>Nº 60</item>
+        <item>Nº 77</item>
+    </string-array>
+
+    <string-array name="valorVenda">
+        <item>$75</item>
+        <item>$897</item>
+        <item>$463</item>
+        <item>$299</item>
+        <item>$200</item>
+        <item>$240</item>
+        <item>$300</item>
+        <item>$200</item>
+    </string-array>
+
+    <string-array name="status">
+        <item>Cancelado</item>
+        <item>Aberto</item>
+        <item>Aprovado</item>
+        <item>Concluído </item>
+        <item>Aprovado</item>
+        <item>Concluído</item>
+        <item>Cancelado</item>
+        <item>Concluído</item>
+
+    </string-array>
+</resources>
