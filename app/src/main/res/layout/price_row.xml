@@ -6,7 +6,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="160dp"
     android:layout_margin="3dp"
-    android:id="@+id/mainLayout"
+    android:id="@+id/priceLayout"
     app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true"
     app:cardElevation="3dp"
@@ -22,26 +22,25 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/myText1"
+            android:id="@+id/dataT"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/descri_o"
-            android:textColor="#303030"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            android:text="@string/data"
+            android:textColor="#5e5e5e"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:fontFamily="sans-serif-medium"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/myText2"
+            android:id="@+id/valorCustoT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nome"
+            android:text="@string/valor_custo"
             android:layout_marginStart="15dp"
             android:layout_marginTop="100dp"
             android:textSize="16sp"
@@ -53,11 +52,11 @@
             app:layout_constraintTop_toBottomOf="@+id/myText1" />
 
         <TextView
-            android:id="@+id/myText3"
+            android:id="@+id/lucroT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="@string/categoria"
+            android:text="@string/lucro"
             android:textSize="16sp"
             android:textColor="#5e5e5e"
             android:layout_marginStart="230dp"
@@ -69,11 +68,11 @@
             app:layout_constraintTop_toBottomOf="@+id/myText2" />
 
         <TextView
-            android:id="@+id/myText4"
+            android:id="@+id/valorVendaT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="@string/codigo"
+            android:text="@string/valor_de_venda"
             android:textSize="16sp"
             android:textColor="#5e5e5e"
             android:layout_marginStart="15dp"
@@ -83,23 +82,5 @@
             app:layout_constraintStart_toStartOf="@+id/myText3"
             android:fontFamily="sans-serif-medium"
             app:layout_constraintTop_toBottomOf="@+id/myText3" />
-
-        <TextView
-            android:id="@+id/myText5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="40dp"
-            android:text="@string/status"
-            android:textSize="16sp"
-            android:textColor="#5e5e5e"
-            android:layout_marginStart="230dp"
-            android:layout_marginTop="50dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.153"
-            app:layout_constraintStart_toStartOf="@+id/myText4"
-            android:fontFamily="sans-serif-medium"
-            app:layout_constraintTop_toBottomOf="@+id/myText4" />
     </RelativeLayout>
 </com.google.android.material.card.MaterialCardView>
-
-

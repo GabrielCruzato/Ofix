@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RecyclerView2"
         android:fontFamily="sans-serif-medium">
-        <activity android:name="com.example.Ofix.SecondActivity"
+        <activity android:name="com.example.Ofix.Details"
             android:parentActivityName="com.example.Ofix.MainActivity"
             android:label="Detalhes"
             android:fontFamily="sans-serif-medium"/>

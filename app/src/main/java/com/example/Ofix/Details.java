@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class SecondActivity extends AppCompatActivity {
+public class Details extends AppCompatActivity {
 
     TextView nome, categoria, codigo, status, valorVenda;
 

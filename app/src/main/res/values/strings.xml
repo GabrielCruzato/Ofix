@@ -5,6 +5,11 @@
     <string name="categoria">categoria</string>
     <string name="codigo">codigo</string>
     <string name="status">status</string>
+    <string name="data">Data</string>
+    <string name="valor_custo">Valor custo</string>
+    <string name="lucro">Lucro (%)</string>
+    <string name="valor_de_venda">Valor de venda</string>
+    <string name="Data" />
 
     <string-array name="nome">
         <item>Porta</item>

@@ -59,7 +59,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, SecondActivity.class);
+                Intent intent = new Intent(context, Details.class);
                 intent.putExtra("s1", s1.get(position));
                 intent.putExtra("s2", s2.get(position));
                 intent.putExtra("s3", s3.get(position));
