@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     List<String> s3;
     List<String> s4;
     List<String> s5;
+    List<String> s6;
+    List<String> s7;
+
 
     MyAdapter myAdapter;
     @Override
