@@ -13,7 +13,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener {
 
     TextView nome, categoria, codigo, status, valorVenda,venda,lucro,custo;
     CardView cardView;
-    String data1, data2, data3, data4, data5,data6,data7;
+    String data1, data2, data3, data4, data5,data6,data7,data8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,23 +30,28 @@ public class Details extends AppCompatActivity implements View.OnClickListener {
         custo = findViewById(R.id.custo);
         cardView = findViewById(R.id.clickablecardview);
 
-        cardView.setOnClickListener(this);
 
 
         getData();
         setData();
 
+        cardView.setOnClickListener(this);
+
+
     }
 
     private void getData(){
-        if(getIntent().hasExtra("s1") && getIntent().hasExtra("s2")  && getIntent().hasExtra("s3") && getIntent().hasExtra("s4") && getIntent().hasExtra("s5")) {
+        if(getIntent().hasExtra("s1") && getIntent().hasExtra("s2")  && getIntent().hasExtra("s3") && getIntent().hasExtra("s4") && getIntent().hasExtra("s5")
+                && getIntent().hasExtra("s6") && getIntent().hasExtra("s7") && getIntent().hasExtra("s8")) {
 
             data1 = getIntent().getStringExtra("s1");
             data2 = getIntent().getStringExtra("s2");
             data3 = getIntent().getStringExtra("s3");
             data4 = getIntent().getStringExtra("s4");
             data5 = getIntent().getStringExtra("s5");
-
+            data6 = getIntent().getStringExtra("s6");
+            data7 = getIntent().getStringExtra("s7");
+            data8 = getIntent().getStringExtra("s8");
 
         }else{
             Toast.makeText(this, "No data.", Toast.LENGTH_SHORT).show();
@@ -61,6 +66,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener {
         status.setText(data5);
         venda.setText(data6);
         lucro.setText(data7);
+        custo.setText(data8);
     }
 
 

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     List<String> s5;
     List<String> s6;
     List<String> s7;
-
+    List<String> s8;
 
     MyAdapter myAdapter;
     @Override
@@ -42,10 +42,13 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> s3 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.codigo)));
         ArrayList<String> s4 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.status)));
         ArrayList<String> s5 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.valorVenda)));
+        ArrayList<String> s6 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.venda)));
+        ArrayList<String> s7 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.custo)));
+        ArrayList<String> s8 = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.lucro)));
+
         Collections.sort(s1);
 
-
-        myAdapter = new MyAdapter(this, s1, s2,s3,s4,s5);
+        myAdapter = new MyAdapter(this, s1, s2,s3,s4,s5,s6,s7,s8);
 
         recyclerView.setAdapter(myAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
