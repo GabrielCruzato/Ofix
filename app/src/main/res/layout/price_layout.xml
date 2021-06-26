@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:autofillHints=""
             android:ems="10"
-            android:hint="@string/status"
+            android:hint="@string/data"
             android:inputType="text" />
 
         <EditText
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number"
-            android:hint="@string/valorVenda"
+            android:hint="@string/Venda"
             android:autofillHints="" />
 
         <Button

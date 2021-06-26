@@ -11,17 +11,21 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PriceAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> implements Filterable {
 
-    String data, valorCusto, valotVenda, lucro;
+    List<String> venda;
+    List<String> custo;
+    List<String> lucro;
     Context context;
 
-    public PriceAdapter(Context context, String data, String valorCusto, String valorVenda, String lucro){
+    public PriceAdapter(Context context, ArrayList<String> venda, ArrayList<String> custo, ArrayList<String> lucro){
 
         this.context = context;
-        this.data = data;
-        this.valorCusto = valorCusto;
-        this.valotVenda = valorVenda;
+        this.venda = venda;
+        this.custo = custo;
         this.lucro = lucro;
     }
 
@@ -48,15 +52,15 @@ public class PriceAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> i
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        TextView dataT, valorCustoT, lucroT, valorVendaT;
+        TextView venda, valorCustoT, lucroT, data;
         CardView priceLayout;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            dataT = itemView.findViewById(R.id.dataT);
+            venda = itemView.findViewById(R.id.venda);
             valorCustoT = itemView.findViewById(R.id.valorCustoT);
             lucroT = itemView.findViewById(R.id.lucroT);
-            valorVendaT = itemView.findViewById(R.id.valorVendaT);
+            data = itemView.findViewById(R.id.data);
             priceLayout = itemView.findViewById(R.id.priceLayout);
         }    }
 }

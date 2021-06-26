@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.RecyclerView2">
-        <activity android:name=".valores"></activity>
         <activity
             android:name=".Details"
             android:fontFamily="sans-serif-medium"
@@ -22,6 +21,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SavedData"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

@@ -22,13 +22,13 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/dataT"
+            android:id="@+id/lucroT"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/status"
+            android:text="@string/lucro"
             android:textColor="#5e5e5e"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -52,27 +52,11 @@
             app:layout_constraintTop_toBottomOf="@+id/myText1" />
 
         <TextView
-            android:id="@+id/lucroT"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="20dp"
-            android:text="@string/lucro"
-            android:textSize="16sp"
-            android:textColor="#5e5e5e"
-            android:layout_marginStart="230dp"
-            android:layout_marginTop="100dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.153"
-            app:layout_constraintStart_toStartOf="@+id/myText2"
-            android:fontFamily="sans-serif-medium"
-            app:layout_constraintTop_toBottomOf="@+id/myText2" />
-
-        <TextView
             android:id="@+id/valorVendaT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="@string/valorVenda"
+            android:text="@string/Venda"
             android:textSize="16sp"
             android:textColor="#5e5e5e"
             android:layout_marginStart="15dp"

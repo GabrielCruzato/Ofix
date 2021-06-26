@@ -2,6 +2,7 @@ package com.example.Ofix;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,13 +32,10 @@ public class Details extends AppCompatActivity implements View.OnClickListener {
         cardView = findViewById(R.id.clickablecardview);
 
 
-
         getData();
         setData();
 
         cardView.setOnClickListener(this);
-
-
     }
 
     private void getData(){
@@ -73,7 +71,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent i;
-        i = new Intent(this,MyAdapter.class);
+        i = new Intent(this,SavedData.class);
         startActivity(i);
     }
 }
