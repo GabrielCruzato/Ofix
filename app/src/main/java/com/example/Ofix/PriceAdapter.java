@@ -16,12 +16,12 @@ import java.util.List;
 
 public class PriceAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> implements Filterable {
 
-    List<String> venda;
-    List<String> custo;
-    List<String> lucro;
+    String venda;
+    String custo;
+    String lucro;
     Context context;
 
-    public PriceAdapter(Context context, ArrayList<String> venda, ArrayList<String> custo, ArrayList<String> lucro){
+    public PriceAdapter(Context context, String venda, String custo, String lucro){
 
         this.context = context;
         this.venda = venda;

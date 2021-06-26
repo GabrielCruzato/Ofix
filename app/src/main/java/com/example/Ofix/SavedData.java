@@ -34,19 +34,6 @@ public class SavedData extends AppCompatActivity {
         valorVenda = findViewById(R.id.valorVenda);
         salvarButton = findViewById(R.id.salvarButton);
 
-
-        RecyclerView recyclerView;
-        PriceAdapter priceAdapter;
-        recyclerView = findViewById(R.id.recyclerViewPrice);
-        ArrayList<String> venda = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.venda)));
-        ArrayList<String> custo = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.custo)));
-        ArrayList<String> lucro = new ArrayList<String>(Arrays.asList(getResources().getStringArray(R.array.lucro)));
-
-        priceAdapter = new PriceAdapter(this,venda,custo,lucro);
-
-        recyclerView.setAdapter(priceAdapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
