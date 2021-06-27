@@ -1,6 +1,5 @@
 package com.example.Ofix;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,72 +7,73 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class SavedData extends AppCompatActivity {
 
-    EditText data, valorCusto, lucro, valorVenda;
-    TextView dataT, valorCustoT, lucroT, valorVendaT;
+    EditText data, valorCusto, lucro;
     Button salvarButton;
-    String dataStr, valorCustoStr, lucroStr, valorVendaStr;
+    TextView valorVenda;
 
-    public static final String SHARED_PREFS = "sharedPrefs";
-    public static final String DATA = "data";
-    public static final String VALORCUSTO = "valorCusto";
-    public static final String LUCRO = "lucro";
-    public static final String VALORVENDA = "valorVenda";
+
+    ArrayList<String> dataList = new ArrayList<String>();
+    ArrayList<String> lucroList = new ArrayList<String>();
+    ArrayList<String> custoList = new ArrayList<String>();
+    ArrayList<String> valorVendaList = new ArrayList<String>();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.price_layout);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        data = (EditText)findViewById(R.id.data);
-        valorCusto =(EditText) findViewById(R.id.valorCusto);
-        lucro = (EditText)findViewById(R.id.lucro);
-        valorVenda = (EditText)findViewById(R.id.valorVenda);
+        data = findViewById(R.id.data);
+        valorCusto = findViewById(R.id.valorCusto);
+        lucro = findViewById(R.id.lucro);
+        valorVenda = findViewById(R.id.valorVenda);
         salvarButton = findViewById(R.id.salvarButton);
-        dataT = findViewById(R.id.dataT);
-        valorCustoT = findViewById(R.id.valorCustoT);
-        lucroT = findViewById(R.id.lucroT);
-        valorVendaT = findViewById(R.id.valorVendaT);
 
-        PriceAdapter priceAdapter = new PriceAdapter(this,data.getText().toString(),valorCusto.getText().toString(),valorVenda.getText().toString(),lucro.getText().toString());
+
+        RecyclerView recyclerView;
+        PriceAdapter priceAdapter;
+        recyclerView = findViewById(R.id.recyclerViewPrice);
+
+
+        priceAdapter = new PriceAdapter(this, valorVendaList, custoList, lucroList, dataList );
 
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                savePrice();
+                pricingOperations();
+                dataList.add(data.getText().toString());
+                custoList.add(valorCusto.getText().toString());
+                lucroList.add(lucro.getText().toString());
+                priceAdapter.notifyDataSetChanged();
             }
         });
+
+        recyclerView.setAdapter(priceAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void savePrice(){
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+    public void pricingOperations() {
 
-        editor.putString(DATA,data.getText().toString());
-        editor.putString(VALORCUSTO,valorCusto.getText().toString());
-        editor.putString(VALORVENDA,valorVenda.getText().toString());
-        editor.putString(LUCRO,lucro.getText().toString());
+        String foo = valorCusto.getText().toString();
+        double custo = Integer.parseInt(foo);
 
-        editor.apply();
+        String foo2 = lucro.getText().toString();
+        double lucro = Integer.parseInt(foo2);
 
-    }
+        double profit = ((lucro / 100) * custo + custo);
 
-    public void loadData(){
-        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+        String sProfit = Double.toString(profit);
 
-        dataStr = sharedPreferences.getString(DATA,"");
-        valorCustoStr = sharedPreferences.getString(VALORCUSTO,"");
-        lucroStr = sharedPreferences.getString(LUCRO,"");
-        valorVendaStr = sharedPreferences.getString(VALORVENDA,"");
-    }
+        valorVendaList.add("$"+ sProfit);
+        valorVenda.setText(sProfit);
 
-    public void updateViews(){
-        dataT.setText(dataStr);
-        valorCustoT.setText(valorCustoStr);
-        valorVendaT.setText(valorVendaStr);
-        lucroT.setText(lucroStr);
     }
 }

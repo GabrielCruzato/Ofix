@@ -4,22 +4,27 @@
 
     <application
         android:allowBackup="true"
+        android:fontFamily="sans-serif-medium"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RecyclerView2"
-        android:fontFamily="sans-serif-medium">
-        <activity android:name="com.example.Ofix.Details"
-            android:parentActivityName="com.example.Ofix.MainActivity"
+        android:theme="@style/Theme.RecyclerView2">
+        <activity
+            android:name=".Details"
+            android:fontFamily="sans-serif-medium"
             android:label="Detalhes"
-            android:fontFamily="sans-serif-medium"/>
-        <activity android:name="com.example.Ofix.MainActivity">
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SavedData"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

@@ -126,6 +126,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:id="@+id/clickablecardview"
         android:orientation="vertical"
         app:cardCornerRadius="20dp"
         android:layout_margin="3dp"
@@ -133,7 +134,7 @@
         >
 
         <TextView
-            android:id="@+id/valorVenda"
+            android:id="@+id/custoText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -149,11 +150,10 @@
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
-            android:id="@+id/valorVenda"
+            android:id="@+id/lucroCardTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="Custo:"
             android:textSize="20sp"
             android:textColor="#5e5e5e"
             android:layout_marginStart="80dp"
@@ -165,7 +165,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
-            android:id="@+id/valorVenda"
+            android:id="@+id/lucroText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
@@ -181,11 +181,10 @@
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
-            android:id="@+id/valorVenda"
+            android:id="@+id/lucro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="Lucro:"
             android:textSize="20sp"
             android:textColor="#5e5e5e"
             android:layout_marginStart="80dp"
@@ -197,7 +196,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
-            android:id="@+id/codigo"
+            android:id="@+id/vendaText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Venda:"
@@ -212,7 +211,7 @@
             app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <TextView
-            android:id="@+id/codigo"
+            android:id="@+id/venda"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="80dp"

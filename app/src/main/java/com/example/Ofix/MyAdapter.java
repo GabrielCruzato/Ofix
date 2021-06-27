@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -25,16 +24,22 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
     List<String> s3;
     List<String> s4;
     List<String> s5;
+    List<String> s6;
+    List<String> s7;
+    List<String> s8;
     List<String> dataAll;
     Context context;
 
-    public MyAdapter(Context ct, List<String> s1,List<String> s2,List<String> s3,List<String> s4,List<String> s5){
+    public MyAdapter(Context ct, List<String> s1,List<String> s2,List<String> s3,List<String> s4,List<String> s5, List<String> s6,List<String> s7,List<String> s8){
         this.context = ct;
         this.s1 = s1;
         this.s2 = s2;
         this.s3 = s3;
         this.s4 = s4;
         this.s5 = s5;
+        this.s6 = s6;
+        this.s7 = s7;
+        this.s8 = s8;
         dataAll = new ArrayList<>(s1);
     }
 
@@ -55,7 +60,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         holder.myText5.setText(s5.get(position));
 
 
-
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +69,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
                 intent.putExtra("s3", s3.get(position));
                 intent.putExtra("s4", s4.get(position));
                 intent.putExtra("s5", s5.get(position));
+                intent.putExtra("s6", s6.get(position));
+                intent.putExtra("s7", s7.get(position));
+                intent.putExtra("s8", s8.get(position));
 
 
                 context.startActivity(intent);
@@ -111,7 +118,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         }
     };
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView myText1, myText2, myText3, myText4, myText5;
         CardView mainLayout;
@@ -122,7 +129,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
             myText2 = itemView.findViewById(R.id.myText2);
             myText3 = itemView.findViewById(R.id.myText3);
             myText4 = itemView.findViewById(R.id.myText4);
-            myText5 = itemView.findViewById(R.id.myText5);
+            myText5 = itemView.findViewById(R.id.vendaCardTextView);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }

@@ -6,7 +6,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="160dp"
     android:layout_margin="3dp"
-    android:id="@+id/mainLayout"
+    android:id="@+id/dataLayout"
     app:cardCornerRadius="20dp"
     app:cardUseCompatPadding="true"
     app:cardElevation="3dp"
@@ -22,13 +22,12 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/myText1"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginStart="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
-            android:text="@string/descri_o"
+            android:text="Valores"
             android:textColor="#303030"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -38,10 +37,23 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/myText2"
+            android:id="@+id/custoCardTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nome"
+            android:layout_marginStart="65dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#5e5e5e"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="@+id/myText1"
+            app:layout_constraintTop_toBottomOf="@+id/myText1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custo:"
             android:layout_marginStart="15dp"
             android:layout_marginTop="100dp"
             android:textSize="16sp"
@@ -53,14 +65,13 @@
             app:layout_constraintTop_toBottomOf="@+id/myText1" />
 
         <TextView
-            android:id="@+id/myText3"
+            android:id="@+id/lucroCardTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="@string/categoria"
             android:textSize="16sp"
             android:textColor="#5e5e5e"
-            android:layout_marginStart="230dp"
+            android:layout_marginStart="238dp"
             android:layout_marginTop="100dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.153"
@@ -69,11 +80,26 @@
             app:layout_constraintTop_toBottomOf="@+id/myText2" />
 
         <TextView
-            android:id="@+id/myText4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="@string/codigo"
+            android:text="Lucro:"
+            android:textSize="16sp"
+            android:textColor="#5e5e5e"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="@+id/myText2"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toBottomOf="@+id/myText2" />
+
+        <TextView
+            android:id="@+id/lucro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Data:"
             android:textSize="16sp"
             android:textColor="#5e5e5e"
             android:layout_marginStart="15dp"
@@ -85,14 +111,44 @@
             app:layout_constraintTop_toBottomOf="@+id/myText3" />
 
         <TextView
+            android:id="@+id/dataCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="#5e5e5e"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="@+id/myText3"
+            app:layout_constraintTop_toBottomOf="@+id/myText3" />
+
+        <TextView
+            android:id="@+id/venda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:text="Venda:"
+            android:textSize="16sp"
+            android:textColor="#5e5e5e"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.153"
+            app:layout_constraintStart_toStartOf="@+id/myText4"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintTop_toBottomOf="@+id/myText4" />
+
+        <TextView
             android:id="@+id/vendaCardTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
-            android:text="@string/status"
             android:textSize="16sp"
             android:textColor="#5e5e5e"
-            android:layout_marginStart="230dp"
+            android:layout_marginStart="245dp"
             android:layout_marginTop="50dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.153"
