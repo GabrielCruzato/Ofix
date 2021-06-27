@@ -43,16 +43,15 @@ public class SavedData extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewPrice);
 
 
-        priceAdapter = new PriceAdapter(this, dataList, custoList, lucroList, dataList);
+        priceAdapter = new PriceAdapter(this, valorVendaList, custoList, lucroList, dataList );
 
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pricingOperations();
-                dataList.add("234");
-                custoList.add("234");
-                lucroList.add("234");
-                valorVendaList.add("234");
+                dataList.add(data.getText().toString());
+                custoList.add(valorCusto.getText().toString());
+                lucroList.add(lucro.getText().toString());
                 priceAdapter.notifyDataSetChanged();
             }
         });
@@ -73,6 +72,7 @@ public class SavedData extends AppCompatActivity {
 
         String sProfit = Double.toString(profit);
 
+        valorVendaList.add("$"+ sProfit);
         valorVenda.setText(sProfit);
 
     }
