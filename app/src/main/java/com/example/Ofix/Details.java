@@ -2,7 +2,6 @@ package com.example.Ofix;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,7 +27,7 @@ public class Details extends AppCompatActivity implements View.OnClickListener {
         valorVenda = findViewById(R.id.valorVenda);
         venda = findViewById(R.id.venda);
         lucro = findViewById(R.id.lucro);
-        custo = findViewById(R.id.custo);
+        custo = findViewById(R.id.lucroCardTextView);
         cardView = findViewById(R.id.clickablecardview);
 
 

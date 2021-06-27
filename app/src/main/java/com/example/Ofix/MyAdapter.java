@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -119,7 +118,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
         }
     };
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         TextView myText1, myText2, myText3, myText4, myText5;
         CardView mainLayout;
@@ -130,7 +129,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> impl
             myText2 = itemView.findViewById(R.id.myText2);
             myText3 = itemView.findViewById(R.id.myText3);
             myText4 = itemView.findViewById(R.id.myText4);
-            myText5 = itemView.findViewById(R.id.myText5);
+            myText5 = itemView.findViewById(R.id.vendaCardTextView);
             mainLayout = itemView.findViewById(R.id.mainLayout);
         }
     }

@@ -1,6 +1,5 @@
 package com.example.Ofix;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class SavedData extends AppCompatActivity {
 
@@ -21,6 +19,11 @@ public class SavedData extends AppCompatActivity {
     TextView valorVenda;
 
 
+    ArrayList<String> dataList = new ArrayList<String>();
+    ArrayList<String> lucroList = new ArrayList<String>();
+    ArrayList<String> custoList = new ArrayList<String>();
+    ArrayList<String> valorVendaList = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,21 +31,37 @@ public class SavedData extends AppCompatActivity {
         setContentView(R.layout.price_layout);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        data = (EditText)findViewById(R.id.data);
-        valorCusto =(EditText) findViewById(R.id.valorCusto);
-        lucro = (EditText)findViewById(R.id.lucro);
+        data = findViewById(R.id.data);
+        valorCusto = findViewById(R.id.valorCusto);
+        lucro = findViewById(R.id.lucro);
         valorVenda = findViewById(R.id.valorVenda);
         salvarButton = findViewById(R.id.salvarButton);
+
+
+        RecyclerView recyclerView;
+        PriceAdapter priceAdapter;
+        recyclerView = findViewById(R.id.recyclerViewPrice);
+
+
+        priceAdapter = new PriceAdapter(this, dataList, custoList, lucroList, dataList);
 
         salvarButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 pricingOperations();
+                dataList.add("234");
+                custoList.add("234");
+                lucroList.add("234");
+                valorVendaList.add("234");
+                priceAdapter.notifyDataSetChanged();
             }
         });
+
+        recyclerView.setAdapter(priceAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    public void pricingOperations(){
+    public void pricingOperations() {
 
         String foo = valorCusto.getText().toString();
         double custo = Integer.parseInt(foo);
@@ -50,7 +69,7 @@ public class SavedData extends AppCompatActivity {
         String foo2 = lucro.getText().toString();
         double lucro = Integer.parseInt(foo2);
 
-        double profit = ((lucro/100)*custo + custo);
+        double profit = ((lucro / 100) * custo + custo);
 
         String sProfit = Double.toString(profit);
 
